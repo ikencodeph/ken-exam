@@ -128,7 +128,7 @@ export default ({
         }),
         search() {
             if (this.activeLocation==null) {
-                alert("Nothing to send");
+                alert("Please select a location");
             } else {
                 if(this.searchCategory!=null && this.searchCategory.length > 0) this.setActiveCategory({ category: this.searchCategory })
                 this.findLocation();
