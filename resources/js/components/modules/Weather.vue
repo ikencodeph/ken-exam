@@ -1,6 +1,6 @@
 <template>
     <b-container>
-        <b-container class="text-center" v-show="Object.keys(weatherInfo).length > 0">
+        <b-container class="text-center" v-show="Object.keys(weatherInfo.list).length > 0">
             <h1>Weather Forecast</h1>
         </b-container>
         <b-container class="text-center" align-h="center">
@@ -16,7 +16,7 @@
                         <strong>{{weather.dt_txt}}</strong>
                     </b-container>
                     <b-container v-for="(w, index) in weather.weather" :key="index" class="justify-content-md-center">
-                        <b-row >
+                        <b-row align-v="center" class="justify-content-md-center" >
                             <img :src="'http://openweathermap.org/img/wn/'+w.icon+'@2x.png'" alt=""> <strong>{{ weather.main.temp}}<span>&#8451;</span></strong>
                         </b-row>
                         <b-row>
@@ -66,7 +66,7 @@ export default ({
         padding-bottom: 2rem;
     }
     .desc{
-        color: #fff;
+        color: rgb(143, 143, 143);
         font-weight: 500;
     }
 </style>
