@@ -1,6 +1,6 @@
 <template>
     <b-container>
-        <b-container class="text-center" v-show="Object.keys(weatherInfo.list).length > 0">
+        <b-container class="text-center" v-show="Object.keys(weatherInfo).length > 0">
             <h1>Weather Forecast</h1>
         </b-container>
         <b-container class="text-center" align-h="center">
