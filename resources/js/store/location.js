@@ -62,11 +62,9 @@ const state = () => ({
                 location: getters.getActiveLocation,
                 activeCategory: getters.getActiveCategory
             };
-            console.log(params);
             axios.get('/api/location/info', { params: params })
                 .then(response => {
                     if (response.status == 200){
-                        console.log(response);
                         commit('setLocationInfo', { locationInfo: response.data});
                         dispatch('weather/loadWeatherInfo', [], {root: true});
                         resolve();
@@ -92,7 +90,6 @@ const state = () => ({
     },
 
     setActiveLocation (state, { location }) {
-        console.log(location);
         state.activeLocation = location;
     },
 
